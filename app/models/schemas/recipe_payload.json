@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "Recipes",
+  "description": "Recipe name, with ingredients, and instructions",
+  "type": "object",
+  "required": [ "name", "ingredients", "instructions" ],
+  "properties": {
+    "recipes": { 
+      "type": "array",
+      "items": {
+        "name": { "type": "string" },
+        "ingredients": {"type": "array" },
+        "instructions": {"type": "array" },
+        "minItems": 1,
+        "uniqueItems": true
+      }
+    }
+  }
+}
